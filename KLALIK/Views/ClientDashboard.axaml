@@ -1,0 +1,97 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="KLALIK.Views.ClientDashboard">
+  <DockPanel>
+    <Border DockPanel.Dock="Top"
+            Padding="12,10"
+            Background="#FF313244">
+      <Grid ColumnDefinitions="*,Auto,Auto,Auto" ColumnSpacing="10">
+        <TextBlock x:Name="BalanceText"
+                   VerticalAlignment="Center"
+                   Foreground="#FFCDD6F4"
+                   FontSize="14" />
+        <Button x:Name="TopUpButton"
+                Grid.Column="1"
+                Content="Пополнить"
+                MinWidth="120" />
+        <Button x:Name="RefreshButton"
+                Grid.Column="2"
+                Content="Обновить"
+                MinWidth="100" />
+        <Button x:Name="LogoutButton"
+                Grid.Column="3"
+                Content="Выйти"
+                MinWidth="100" />
+      </Grid>
+    </Border>
+    <TabControl Margin="12">
+      <TabItem Header="Косплей">
+        <Grid RowDefinitions="Auto,*" Margin="0,8,0,0" RowSpacing="10">
+          <Grid ColumnDefinitions="*,220" ColumnSpacing="10">
+            <TextBox x:Name="CosplaySearchBox"
+                     PlaceholderText="Поиск по названию или описанию…" />
+            <ComboBox x:Name="CosplayDirectionFilter"
+                      Grid.Column="1"
+                      PlaceholderText="Коллекция" />
+          </Grid>
+          <ScrollViewer Grid.Row="1">
+            <StackPanel x:Name="CosplayServicesPanel" Spacing="12" />
+          </ScrollViewer>
+        </Grid>
+      </TabItem>
+      <TabItem Header="Кастомизация">
+        <Grid RowDefinitions="Auto,*" Margin="0,8,0,0" RowSpacing="10">
+          <Grid ColumnDefinitions="*,220" ColumnSpacing="10">
+            <TextBox x:Name="CustomSearchBox"
+                     PlaceholderText="Поиск по названию или описанию…" />
+            <ComboBox x:Name="CustomDirectionFilter"
+                      Grid.Column="1"
+                      PlaceholderText="Коллекция" />
+          </Grid>
+          <ScrollViewer Grid.Row="1">
+            <StackPanel x:Name="CustomServicesPanel" Spacing="12" />
+          </ScrollViewer>
+        </Grid>
+      </TabItem>
+      <TabItem Header="Мои записи">
+        <ListBox x:Name="BookingsList"
+                 Margin="0,8,0,0" />
+      </TabItem>
+      <TabItem Header="Мои отзывы">
+        <ScrollViewer Margin="0,8,0,0">
+          <StackPanel x:Name="MyReviewsPanel" Spacing="12" />
+        </ScrollViewer>
+      </TabItem>
+      <TabItem Header="Отзыв">
+        <StackPanel Margin="0,12,0,0" Spacing="10" MaxWidth="520" HorizontalAlignment="Left">
+          <TextBlock Text="Тип отзыва" Foreground="#FFBAC2DE" />
+          <ComboBox x:Name="ReviewTargetType"
+                    PlaceholderText="Услуга или мастер">
+            <ComboBoxItem Content="Услуга" Tag="service" />
+            <ComboBoxItem Content="Мастер" Tag="master" />
+          </ComboBox>
+          <ComboBox x:Name="ReviewTargetPicker"
+                    PlaceholderText="Выберите объект" />
+          <StackPanel Orientation="Horizontal" Spacing="8">
+            <TextBlock Text="Оценка (1–5)"
+                       VerticalAlignment="Center"
+                       Foreground="#FFBAC2DE" />
+            <NumericUpDown x:Name="ReviewRating"
+                           Minimum="1"
+                           Maximum="5"
+                           Value="5"
+                           Width="120" />
+          </StackPanel>
+          <TextBox x:Name="ReviewComment"
+                   PlaceholderText="Текст отзыва"
+                   AcceptsReturn="True"
+                   Height="100" />
+          <Button x:Name="SubmitReviewButton"
+                  Content="Отправить отзыв"
+                  HorizontalAlignment="Left"
+                  MinWidth="160" />
+        </StackPanel>
+      </TabItem>
+    </TabControl>
+  </DockPanel>
+</UserControl>

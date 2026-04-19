@@ -1,0 +1,8 @@
+admin@matye.local
+Admin123!
+client@matye.local
+Client123!
+mod@matye.local
+Mod123!
+master@matye.local
+Master123!

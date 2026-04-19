@@ -1,0 +1,60 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="KLALIK.MainWindow"
+        Title="Лавка Матье"
+        Width="1120"
+        Height="720"
+        MinWidth="1120"
+        MinHeight="720"
+        MaxWidth="1120"
+        MaxHeight="720"
+        WindowStartupLocation="CenterScreen"
+        CanResize="False"
+        WindowDecorations="None"
+        Background="#FF1E1E2E">
+  <DockPanel>
+    <Border DockPanel.Dock="Top"
+            Height="40"
+            Background="#FF313244"
+            PointerPressed="TitleBar_OnPointerPressed">
+      <Grid ColumnDefinitions="*,Auto">
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="12,0,0,0" Spacing="10">
+          <TextBlock Text="Лавка Матье"
+                     VerticalAlignment="Center"
+                     Foreground="#FFCDD6F4"
+                     FontWeight="SemiBold"
+                     FontSize="14" />
+          <TextBlock x:Name="SubtitleText"
+                     VerticalAlignment="Center"
+                     Foreground="#FFA6ADC8"
+                     FontSize="12"
+                     Text="" />
+        </StackPanel>
+        <StackPanel Grid.Column="1"
+                    Orientation="Horizontal"
+                    Spacing="0"
+                    VerticalAlignment="Stretch">
+          <Button x:Name="MinimizeButton"
+                  Content="—"
+                  Width="48"
+                  Height="40"
+                  CornerRadius="0"
+                  Background="Transparent"
+                  Foreground="#FFCDD6F4"
+                  BorderThickness="0"
+                  Click="MinimizeButton_OnClick" />
+          <Button x:Name="CloseButton"
+                  Content="✕"
+                  Width="48"
+                  Height="40"
+                  CornerRadius="0"
+                  Background="Transparent"
+                  Foreground="#FFCDD6F4"
+                  BorderThickness="0"
+                  Click="CloseButton_OnClick" />
+        </StackPanel>
+      </Grid>
+    </Border>
+    <ContentControl x:Name="ShellHost" />
+  </DockPanel>
+</Window>

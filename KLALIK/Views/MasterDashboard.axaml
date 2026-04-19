@@ -1,0 +1,50 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="KLALIK.Views.MasterDashboard">
+  <DockPanel>
+    <Border DockPanel.Dock="Top"
+            Padding="12,10"
+            Background="#FF313244">
+      <Grid ColumnDefinitions="*,Auto" ColumnSpacing="10">
+        <TextBlock x:Name="HeaderText"
+                   VerticalAlignment="Center"
+                   Foreground="#FFCDD6F4"
+                   FontSize="14" />
+        <Button x:Name="LogoutButton"
+                Grid.Column="1"
+                Content="Выйти"
+                MinWidth="100" />
+      </Grid>
+    </Border>
+    <TabControl Margin="12">
+      <TabItem Header="Записи ко мне">
+        <ListBox x:Name="BookingsList" Margin="0,8,0,0" />
+      </TabItem>
+      <TabItem Header="Мои услуги">
+        <ListBox x:Name="ServicesList" Margin="0,8,0,0" />
+      </TabItem>
+      <TabItem Header="Отзывы">
+        <ScrollViewer Margin="0,8,0,0">
+          <StackPanel x:Name="MasterReviewsPanel" Spacing="12" />
+        </ScrollViewer>
+      </TabItem>
+      <TabItem Header="Повышение квалификации">
+        <StackPanel Margin="0,12,0,0" Spacing="10" MaxWidth="560" HorizontalAlignment="Left">
+          <TextBlock Text="Комментарий к заявке"
+                     Foreground="#FFBAC2DE" />
+          <TextBox x:Name="QualificationNote"
+                   AcceptsReturn="True"
+                   Height="100"
+                   PlaceholderText="Опишите, какие навыки хотите подтвердить" />
+          <Button x:Name="SubmitQualificationButton"
+                  Content="Отправить заявку"
+                  HorizontalAlignment="Left"
+                  MinWidth="200" />
+          <TextBlock x:Name="QualificationStatus"
+                     Foreground="#FFA6ADC8"
+                     TextWrapping="Wrap" />
+        </StackPanel>
+      </TabItem>
+    </TabControl>
+  </DockPanel>
+</UserControl>

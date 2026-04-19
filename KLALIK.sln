@@ -1,0 +1,31 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36109.1 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KLALIK", "KLALIK\KLALIK.csproj", "{984E2B25-93F4-4CAB-B107-4C4C4B5D8217}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KLALIK.Tests", "KLALIK.Tests\KLALIK.Tests.csproj", "{B2F8E4C1-9A3D-4E7B-8C6D-1F2E3D4C5B6A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{984E2B25-93F4-4CAB-B107-4C4C4B5D8217}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{984E2B25-93F4-4CAB-B107-4C4C4B5D8217}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{984E2B25-93F4-4CAB-B107-4C4C4B5D8217}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{984E2B25-93F4-4CAB-B107-4C4C4B5D8217}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2F8E4C1-9A3D-4E7B-8C6D-1F2E3D4C5B6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2F8E4C1-9A3D-4E7B-8C6D-1F2E3D4C5B6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2F8E4C1-9A3D-4E7B-8C6D-1F2E3D4C5B6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2F8E4C1-9A3D-4E7B-8C6D-1F2E3D4C5B6A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B425B1C5-F45F-4A75-9C46-DA63675FD759}
+	EndGlobalSection
+EndGlobal

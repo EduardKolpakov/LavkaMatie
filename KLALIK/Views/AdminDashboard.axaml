@@ -1,0 +1,31 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="KLALIK.Views.AdminDashboard">
+  <DockPanel>
+    <Border DockPanel.Dock="Top"
+            Padding="12,10"
+            Background="#FF313244">
+      <Grid ColumnDefinitions="*,Auto,Auto" ColumnSpacing="10">
+        <TextBlock Text="Панель администратора"
+                   VerticalAlignment="Center"
+                   Foreground="#FFCDD6F4"
+                   FontSize="14"
+                   FontWeight="SemiBold" />
+        <Button x:Name="AddEmployeeButton"
+                Grid.Column="1"
+                Content="Добавить сотрудника"
+                MinWidth="180" />
+        <Button x:Name="LogoutButton"
+                Grid.Column="2"
+                Content="Выйти"
+                MinWidth="100" />
+      </Grid>
+    </Border>
+    <Grid Margin="12" RowDefinitions="Auto,*" RowSpacing="10">
+      <TextBlock Text="Пользователи"
+                 Foreground="#FFBAC2DE"
+                 FontWeight="SemiBold" />
+      <ListBox x:Name="UsersList" Grid.Row="1" />
+    </Grid>
+  </DockPanel>
+</UserControl>
